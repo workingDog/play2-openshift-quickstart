@@ -4,12 +4,15 @@ Play framework 2.X application on OpenShift Express
 This git repository  will help you get up and running quickly with a Play Framework 2 application (including versions 2.1, 2.2 and 2.3) on OpenShift Express taking advantage of the do-it-yourself cartridge. To work within the constrained amount of memory available in the free versions of OpenShift, compilation takes place locally and is then deployed. For a different approach from that taken here see http://misto.ch/play-on-openshift/
 
 I modified the files to use activator for Play 2.3 only.
+
 I put these at the beginning of the 'start' action_hooks in the .openshift directory for using Java 8.
+
      export PATH=$OPENSHIFT_DATA_DIR/jdk1.8.0_45/bin:$PATH
      export JAVA_HOME=$OPENSHIFT_DATA_DIR/jdk1.8.0_45/
      echo $JAVA_HOME > $OPENSHIFT_DIY_DIR/env/JAVA_HOME
 
-So once you have setup your application on your DIY cartridge, add java 8 using the following commands:
+So once you have setup your application, before you run it, add java 8 using the following commands:
+
      ssh into you you application, then
      cd $OPENSHIFT_DATA_DIR 
      wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-linux-x64.tar.gz
