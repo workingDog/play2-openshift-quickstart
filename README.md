@@ -9,7 +9,6 @@ I also put these at the beginning of the 'start' action_hooks in the .openshift 
 
      export PATH=$OPENSHIFT_DATA_DIR/jdk1.8.0_45/bin:$PATH
      export JAVA_HOME=$OPENSHIFT_DATA_DIR/jdk1.8.0_45/
-     echo $JAVA_HOME > $OPENSHIFT_DIY_DIR/env/JAVA_HOME
 
 So once you have setup your application, before you run it, add java 8 using the following commands:
 
